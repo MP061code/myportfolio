@@ -692,47 +692,87 @@ Awarded a prestigious scholarship by the Embassy of India for academic merit.</p
 <!--contact-->
    <section id="contact" class="contact">
   <div class="container">
-    <div class="row justify-content-center">
 
-      <div class="col-lg-7">
-        <form id="contact-form" data-aos="fade-up" data-aos-delay="200">
-          <div class="row gy-4">
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>Feel free to reach out for projects or collaborations</p>
+    </div>
 
-            <div class="col-md-6">
-              <label for="name-field" class="pb-2">Your Name</label>
-              <input type="text" name="from_name" id="name-field" class="form-control" required>
+    <div class="row">
+
+      <!-- Contact Info -->
+      <div class="col-lg-5">
+        <div class="contact-info">
+
+          <div class="info-item">
+            <i class="bi bi-geo-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>India</p>
             </div>
-
-            <div class="col-md-6">
-              <label for="email-field" class="pb-2">Your Email</label>
-              <input type="email" class="form-control" name="reply_to" id="email-field" required>
-            </div>
-
-            <div class="col-md-12">
-              <label for="subject-field" class="pb-2">Subject</label>
-              <input type="text" class="form-control" name="subject" id="subject-field" required>
-            </div>
-
-            <div class="col-md-12">
-              <label for="message-field" class="pb-2">Message</label>
-              <textarea class="form-control" name="message" rows="10" id="message-field" required></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <div class="loading" style="display:none;">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message" style="display:none;">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Send Message</button>
-            </div>
-
           </div>
-        </form>
+
+          <div class="info-item">
+            <i class="bi bi-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>your@email.com</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="bi bi-phone"></i>
+            <div>
+              <h4>Call</h4>
+              <p>+91 XXXXXXXX</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <div class="contact-form-box">
+
+          <form id="contact-form">
+            <div class="row g-3">
+
+              <div class="col-md-6">
+                <input type="text" name="from_name" class="form-control" placeholder="Your Name" required>
+              </div>
+
+              <div class="col-md-6">
+                <input type="email" name="reply_to" class="form-control" placeholder="Your Email" required>
+              </div>
+
+              <div class="col-12">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+              </div>
+
+              <div class="col-12">
+                <textarea name="message" rows="6" class="form-control" placeholder="Message" required></textarea>
+              </div>
+
+              <div class="col-12 text-center">
+                <button type="submit" class="btn-contact">Send Message</button>
+              </div>
+
+              <div class="col-12 text-center">
+                <p id="form-message"></p>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
       </div>
 
     </div>
+
   </div>
 </section>
+
 <!-- /Contact Section -->
 
   </main>
@@ -773,8 +813,9 @@ Awarded a prestigious scholarship by the Embassy of India for academic merit.</p
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+ <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="main.js"></script>
+
 
 
 </body>
