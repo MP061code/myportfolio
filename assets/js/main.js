@@ -258,4 +258,46 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+   /**
+   * contact
+   */
+(function () {
+  emailjs.init("dwRY1ZGQu43ai7aDr"); // Your public key
+})();
+
+const form = document.getElementById("contact-form");
+const loading = document.querySelector(".loading");
+const errorMessage = document.querySelector(".error-message");
+const sentMessage = document.querySelector(".sent-message");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Show loading and hide messages
+  loading.style.display = "block";
+  errorMessage.style.display = "none";
+  sentMessage.style.display = "none";
+
+  emailjs.sendForm(
+    "service_lh99e99",   // Your EmailJS service ID
+    "template_rxkbgle",  // Your EmailJS template ID
+    this                  // The form element
+  ).then(
+    () => {
+      // Success
+      loading.style.display = "none";
+      sentMessage.style.display = "block";
+      form.reset();
+    },
+    (err) => {
+      // Failure
+      loading.style.display = "none";
+      errorMessage.textContent = "Message failed. Try again.";
+      errorMessage.style.display = "block";
+      console.error("EmailJS Error:", err);
+    }
+  );
+});
+
+
 })();
